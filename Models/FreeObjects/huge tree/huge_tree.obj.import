@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnldhou8qunhn"
+path="res://.godot/imported/huge_tree.obj-fdecf9cc177ca4f8d9ec74019b4fb123.mesh"
+
+[deps]
+
+files=["res://.godot/imported/huge_tree.obj-fdecf9cc177ca4f8d9ec74019b4fb123.mesh"]
+
+source_file="res://Models/FreeObjects/huge tree/huge_tree.obj"
+dest_files=["res://.godot/imported/huge_tree.obj-fdecf9cc177ca4f8d9ec74019b4fb123.mesh", "res://.godot/imported/huge_tree.obj-fdecf9cc177ca4f8d9ec74019b4fb123.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
