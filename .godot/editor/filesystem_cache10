@@ -1,17 +1,17 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1758930941
+::res://::1758936685
 icon.svg::CompressedTexture2D::6746000906115018931::1758832528::1758832530::1::::<><><>0<>0<>5fa6d3d44fc56b93ffe46d6d15fb1e00<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::1240154770264647946::1758928950::0::1::::<><><>0<>0<><>::uid://cqubdkwj11v1i::::res://Models/Grass.jpg<>uid://cndcxj6gf0smr::::res://Models/Terrain.obj<>uid://5ig53l2hm8wn::::res://PlayerController.gd<>uid://cfr7h8g71lsm2::::res://Models/Tree.tscn<>uid://0btpvryw4jpj::::res://Models/FreeObjects/pine/snow_pine_tree.obj<>uid://bq3aieplxplbo::::res://Models/FreeObjects/pine/diffuse_none.tga<>uid://de2h3xff2nw5o::::res://Models/FreeObjects/pumpkin/pumpkin_plant.obj<>uid://dv8bp3qa8xh1::::res://Models/FreeObjects/pumpkin/diffuse.tga<>uid://cnldhou8qunhn::::res://Models/FreeObjects/huge tree/huge_tree.obj<>uid://bxcykcwiqq3qo::::res://Models/FreeObjects/huge tree/diffuse.tga
-PlayerController.gd::GDScript::2122599695830469357::1758923106::0::1::::PlayerController<>CharacterBody3D<><>0<>0<><>::
-player_controller.gd::GDScript::8218954771803454615::1758910937::0::1::::<>CharacterBody3D<><>0<>0<><>::
+main.tscn::PackedScene::1240154770264647946::1758936193::0::1::::<><><>0<>0<><>::uid://cqubdkwj11v1i::::res://Models/Grass.jpg<>uid://cndcxj6gf0smr::::res://Models/Terrain.obj<>uid://cfr7h8g71lsm2::::res://Models/Tree.tscn<>uid://0btpvryw4jpj::::res://Models/FreeObjects/pine/snow_pine_tree.obj<>uid://bq3aieplxplbo::::res://Models/FreeObjects/pine/diffuse_none.tga<>uid://de2h3xff2nw5o::::res://Models/FreeObjects/pumpkin/pumpkin_plant.obj<>uid://dv8bp3qa8xh1::::res://Models/FreeObjects/pumpkin/diffuse.tga<>uid://cnldhou8qunhn::::res://Models/FreeObjects/huge tree/huge_tree.obj<>uid://coarkmefi7q5s::::res://player.tscn<>uid://bxcykcwiqq3qo::::res://Models/FreeObjects/huge tree/diffuse.tga<>uid://d1tp4sgewhe32::::res://player_spawner.gd<>uid://cvg0w004xoiba::::res://high_level_ui.gd
+player.tscn::PackedScene::5756535861833298798::1758936363::0::1::::<><><>0<>0<><>::uid://5ig53l2hm8wn::::res://Scripts/PlayerController.gd<>uid://b7s46ctjehiy8::::res://Models/FreeObjects/Humanoid Figure/FinalBaseMesh.obj
+main.gd::GDScript::6958699272998521442::1758936685::0::1::::<>Node3D<><>0<>0<><>::
 ::res://Models/::1758923298
 Grass.jpg::CompressedTexture2D::5937217054714306144::1701455608::1758869406::1::::<><><>0<>0<>20b3ca0c46698fda2bc337f0589f4148<>res://.godot/imported/Grass.jpg-c73c2928aead0bd6c8caa7940141dc28.s3tc.ctex::
 Pedestal.tscn::PackedScene::8603974175239891152::1758869406::0::1::::<><><>0<>0<><>::uid://disdcqmbkftbi::::res://Models/Pedestal/PedestalMaterial.tres<>uid://c1ldxdvsp4ywh::::res://Models/Pedestal/Pedestal.obj
 Terrain.obj::Mesh::5691652496067534217::1701455608::1758869406::1::::<><><>0<>0<>916cef3486aaac2b778683fab9ba82c9<>res://.godot/imported/Terrain.obj-1ce16dbff46eb04a0d2950260643f52a.mesh<*>res://.godot/imported/Terrain.obj-1ce16dbff46eb04a0d2950260643f52a.mesh::
 TerrainMaterial.tres::StandardMaterial3D::8378949184304934189::1758869406::0::1::::<><><>0<>0<><>::uid://cqubdkwj11v1i::::res://Models/Grass.jpg
 Tree.tscn::PackedScene::5160837195749754483::1758923298::0::1::::<><><>0<>0<><>::uid://cn1fag3jvwd8::::res://Models/Tree_0/tree_obj.obj<>uid://d4mvcfqu7qr3n::::res://Models/Tree_0/leaf04.dds<>uid://c6v5ibtf1ybqn::::res://Models/Tree_0/leaf06.dds
-::res://Models/FreeObjects/::1758922594
-preview.jpg::CompressedTexture2D::4767296484495307651::1345294624::1758922594::1::::<><><>0<>0<>7c61bc0144e1e6fd5532ecf9084d4dfb<>res://.godot/imported/preview.jpg-ae85259bb044907a70d4a35a2b579597.ctex::
+::res://Models/FreeObjects/::1758934805
+preview.jpg::CompressedTexture2D::6670279250430328228::1345294624::1758934778::1::::<><><>0<>0<>20fadfbbf856bb0c62292eb206207d04<>res://.godot/imported/preview.jpg-ae85259bb044907a70d4a35a2b579597.ctex::
 ::res://Models/FreeObjects/cactus/::1758922594
 cactus.FBX::PackedScene::6007602275869290468::1345132049::1758922594::1::::<><><>0<>0<>59aae4bc3c1e14177cd4ad5524c5cbd9<>res://.godot/imported/cactus.FBX-e2cf071fdfb1d85e178e746baa8cce20.scn::uid://bnc6qbq4o2b0::::res://Models/FreeObjects/cactus/diffuse.tga
 cactus.obj::Mesh::49008093469816064::1345132041::1758922594::1::::<><><>0<>0<>89eeaa5ebde224e1328c84c914c30a84<>res://.godot/imported/cactus.obj-fbf02c1f1646f081963bd452752e772e.mesh<*>res://.godot/imported/cactus.obj-fbf02c1f1646f081963bd452752e772e.mesh::
@@ -27,6 +27,8 @@ normal.tga::CompressedTexture2D::4621313368231262244::1345235172::1758922594::1:
 preview.jpg::CompressedTexture2D::2910558911448008286::1345216739::1758922593::1::::<><><>0<>0<>400457197f3e8cc9916deaa9874815c0<>res://.godot/imported/preview.jpg-494d2ae063ea11b926ba037e632e60e4.ctex::
 specular.tga::CompressedTexture2D::3620840799496648170::1345211870::1758922593::1::::<><><>0<>0<>1ee4ebef4afcbae78a06a942b6659aff<>res://.godot/imported/specular.tga-dc9d6ae52a4b10eee0d7d48b209b0acc.s3tc.ctex::
 translucency.tga::CompressedTexture2D::7418170618375281240::1345235146::1758922594::1::::<><><>0<>0<>0b3b9f6c5d72ae3721a9820df546f4ec<>res://.godot/imported/translucency.tga-e5f081352e1fec87671239ed8ee6ccdc.ctex::
+::res://Models/FreeObjects/Humanoid Figure/::1758934805
+FinalBaseMesh.obj::Mesh::4671438766897026121::1408667872::1758934805::1::::<><><>0<>0<>d3733e4ca9339b5b0d0fa2b736871312<>res://.godot/imported/FinalBaseMesh.obj-e299868015c7a27cdb7e5e0c8dabbad4.mesh<*>res://.godot/imported/FinalBaseMesh.obj-e299868015c7a27cdb7e5e0c8dabbad4.mesh::
 ::res://Models/FreeObjects/pine/::1758922594
 diffuse_full.tga::CompressedTexture2D::1948969904821693029::1345219916::1758922593::1::::<><><>0<>0<>7ec24796239d9cf92b64464817bb18d0<>res://.godot/imported/diffuse_full.tga-762288fae3af7b36e25b6a7f0ed250a6.s3tc.ctex::
 diffuse_half.tga::CompressedTexture2D::5061550333236973468::1345218825::1758922594::1::::<><><>0<>0<>0d5205e3b5b042df497fdb9e7a133858<>res://.godot/imported/diffuse_half.tga-b715e3704028c6b12e5631a8f22448c1.s3tc.ctex::
@@ -76,3 +78,6 @@ leaf04.dds::Texture::9220789966352607241::1701989694::0::1::::<><><>0<>0<><>::
 leaf06.dds::Texture::6993883331272195313::1701989694::0::1::::<><><>0<>0<><>::
 Tree.tres::StandardMaterial3D::5050267420569150131::1701989694::0::1::::<><><>0<>0<><>::res://Models/Tree/leaf06.dds
 tree_obj.obj::Mesh::168802179414190743::1701989694::1758869406::1::::<><><>0<>0<>140a3a115f779376396846207961d7b3<>res://.godot/imported/tree_obj.obj-2a9ca4cac45067fb24869c80e2b53808.mesh<*>res://.godot/imported/tree_obj.obj-2a9ca4cac45067fb24869c80e2b53808.mesh::uid://3ay1do2fe2cv::::res://Models/Tree_0/bark01.dds<>uid://d4mvcfqu7qr3n::::res://Models/Tree_0/leaf04.dds<>uid://c6v5ibtf1ybqn::::res://Models/Tree_0/leaf06.dds
+::res://Scripts/::1758936363
+high_level_network_handler.gd::GDScript::5306030275663991390::1758933853::0::1::::<>Node<><>0<>0<><>::
+PlayerController.gd::GDScript::2122599695830469357::1758936363::0::1::::PlayerController<>CharacterBody3D<><>0<>0<><>::

@@ -1,0 +1,10 @@
+res://main.tscn
+res://PlayerController.gd
+res://player.tscn
+res://Scripts/high_level_network_handler.gd
+res://Scripts/PlayerController.gd
+res://high_level_ui.gd
+res://player_spawner.gd
+res://main.gd
+res://Scripts/main.gd
+res://pause.gd

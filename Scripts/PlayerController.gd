@@ -15,13 +15,24 @@ var is_running : bool = false
 @export var look_sensitivity : float = 0.005
 var camera_look_input : Vector2
 
-@onready var camera : Camera3D = get_node("Camera3D")
+@onready var camera : Camera3D = $Camera3D #get_node("Camera3D")
 @onready var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") * gravity_modifier
+
+#Multiplayer set authority
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-func _physics_process(delta):
+	camera.current = is_multiplayer_authority()
+	if is_multiplayer_authority():
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+func _physics_process(delta: float) -> void:
+	#Multiplayer 
+	if !is_multiplayer_authority(): return #don't let other players control other characters
+	
 	#Apply gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -56,18 +67,24 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	#Camera_Look
-	rotate_y(-camera_look_input.x * look_sensitivity)
-	camera.rotate_x(-camera_look_input.y * look_sensitivity)
-	camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
-	camera_look_input = Vector2.ZERO
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		rotate_y(-camera_look_input.x * look_sensitivity)
+		camera.rotate_x(-camera_look_input.y * look_sensitivity)
+		camera.rotation.x = clamp(camera.rotation.x, -1.5, 1.5)
+		camera_look_input = Vector2.ZERO
 	
 	#Mouse
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("lock_cursor"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			
+	
+	if Input.is_action_just_pressed("quit"):
+		$"../".exit_game(name.to_int())
+		get_tree().quit()
+	
+	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		camera_look_input = event.relative
