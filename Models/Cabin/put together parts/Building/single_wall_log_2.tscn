@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://cg54lfuak2pa8"]
+
+[ext_resource type="Texture2D" uid="uid://b27os53nxvb3" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin_10.png" id="1_rv6js"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gybj6"]
+resource_name = "Log"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_rv6js")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4gulf"]
+_surfaces = [{
+"aabb": AABB(0, -1.5, -0.15, 0.15, 3, 0.3),
+"format": 34359742465,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgABAAMAAgAEAAAABQAAAAQAAwAAAAUABAAGAAUAAwAFAAcABwAFAAYACAAGAAQABgAIAAcACAAEAAIAAwAHAAgACAACAAkAAwAJAAIACAAJAAMA"),
+"name": "Log",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("JDnZPQAAwD8kOdm9AAAAAAAAwD+amRm+AAAAAAAAwL+amRm+AAAAAAAAwD+amRk+JDnZPQAAwL8kOdm9mpkZPgAAwD8AAAAAmpkZPgAAwL8AAAAAJDnZPQAAwD8kOdk9JDnZPQAAwL8kOdk9AAAAAAAAwL+amRk+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5e1rg"]
+resource_name = "Cylinder_023"
+_surfaces = [{
+"aabb": AABB(0, -1.5, -0.15, 0.15, 3, 0.3),
+"attribute_data": PackedByteArray("97hzPyYR7T73uHM/WDkVP7BpMD1VORU/sGkwPSAR7T74uHM/mq+vPve4cz8mEe0+sGkwPSAR7T7AaTA9kq+vPvi4cz8YnGQ++LhzP5qvrz7AaTA9kq+vPtBpMD0InGQ++bhzP/ix0z34uHM/GJxkPtBpMD0InGQ+0GkwPfix0z3ooAo9UQFOP2AahD3XbCg/aBqEPe5zVD/YoAo9dN8uP5A5rTxicD4/TIFuP+9zVD+IWnY/dN8uP8uaeT9kcD4/S4FuP9hsKD+IWnY/UgFOP0yBbj/vc1Q/aBqEPe5zVD9gGoQ912woP0uBbj/YbCg/"),
+"format": 34359742487,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEAATABEAEAAUABMAFQAWABcAFQAYABYAFQAXABkAGgAbABwAHAAdABoA"),
+"material": SubResource("StandardMaterial3D_gybj6"),
+"name": "Log",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("JDnZPQAAwD8kOdm9AAAAAAAAwD+amRm+AAAAAAAAwL+amRm+JDnZPQAAwL8kOdm9mpkZPgAAwD8AAAAAJDnZPQAAwD8kOdm9JDnZPQAAwL8kOdm9mpkZPgAAwL8AAAAAJDnZPQAAwD8kOdk9mpkZPgAAwD8AAAAAmpkZPgAAwL8AAAAAJDnZPQAAwL8kOdk9AAAAAAAAwD+amRk+JDnZPQAAwD8kOdk9JDnZPQAAwL8kOdk9AAAAAAAAwL+amRk+JDnZPQAAwL8kOdk9AAAAAAAAwL+amRm+AAAAAAAAwL+amRk+JDnZPQAAwL8kOdm9mpkZPgAAwL8AAAAAAAAAAAAAwD+amRk+JDnZPQAAwD8kOdm9mpkZPgAAwD8AAAAAAAAAAAAAwD+amRm+JDnZPQAAwD8kOdk9AAAAAAAAwD+amRk+AAAAAAAAwL+amRk+AAAAAAAAwL+amRm+AAAAAAAAwD+amRm+//+B2v9//////4Ha/3//////gdr/f/////+B2v9//////3yl/3//////fKX/f/////98pf9//////3yl/3///4Ha/3//f///gdr/f/9///+B2v9//3///4Ha/3//f///fKX/f/9///98pf9//3///3yl/3//f///fKX/f/9/////fwAAAAD/v/9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//3///////7//f////v//v/9///////+//3////7//7//f////v//vwAA/3//f///AAD/f/9///8AAP9//3///wAA/3//f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4gulf")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ye5ur"]
+data = PackedVector3Array(0.1061, 1.5, -0.1061, 0, 1.5, -0.14999999, 0, -1.5, -0.14999999, 0, -1.5, -0.14999999, 0.1061, -1.5, -0.1061, 0.1061, 1.5, -0.1061, 0.14999999, 1.5, 0, 0.1061, 1.5, -0.1061, 0.1061, -1.5, -0.1061, 0.1061, -1.5, -0.1061, 0.14999999, -1.5, 0, 0.14999999, 1.5, 0, 0.1061, 1.5, 0.1061, 0.14999999, 1.5, 0, 0.14999999, -1.5, 0, 0.14999999, -1.5, 0, 0.1061, -1.5, 0.1061, 0.1061, 1.5, 0.1061, 0, 1.5, 0.14999999, 0.1061, 1.5, 0.1061, 0.1061, -1.5, 0.1061, 0.1061, -1.5, 0.1061, 0, -1.5, 0.14999999, 0, 1.5, 0.14999999, 0.1061, -1.5, 0.1061, 0, -1.5, -0.14999999, 0, -1.5, 0.14999999, 0.1061, -1.5, 0.1061, 0.1061, -1.5, -0.1061, 0, -1.5, -0.14999999, 0.1061, -1.5, 0.1061, 0.14999999, -1.5, 0, 0.1061, -1.5, -0.1061, 0, 1.5, 0.14999999, 0.1061, 1.5, -0.1061, 0.14999999, 1.5, 0, 0, 1.5, 0.14999999, 0, 1.5, -0.14999999, 0.1061, 1.5, -0.1061, 0, 1.5, 0.14999999, 0.14999999, 1.5, 0, 0.1061, 1.5, 0.1061, 0, 1.5, 0.14999999, 0, -1.5, 0.14999999, 0, -1.5, -0.14999999, 0, -1.5, -0.14999999, 0, 1.5, -0.14999999, 0, 1.5, 0.14999999)
+
+[node name="SingleWallLog_2" type="StaticBody3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1920929e-07, -8.6426735e-07, 1, -1, 0, 5.9604645e-08, 2.9802322e-08, -0.99999994, -8.34465e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_5e1rg")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.1920929e-07, -8.6426735e-07, 1, -1, 0, 5.9604645e-08, 2.9802322e-08, -0.99999994, -8.34465e-07, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ye5ur")

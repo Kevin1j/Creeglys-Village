@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://y0gmjbscg5wf"]
+
+[ext_resource type="Texture2D" uid="uid://ncq1o4dtup5s" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin_13.png" id="1_gp7do"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_novle"]
+resource_name = "Books"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_gp7do")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qdf0g"]
+_surfaces = [{
+"aabb": AABB(-0.0807584, -0.13681549, -0.11002325, 0.1615168, 0.27363098, 0.2200465),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAFAAMAAwAGAAIABwAFAAAAAwAFAAcAAAAEAAcABwAGAAMABwAEAAIAAgAGAAcA"),
+"name": "Books",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("CuoovVwZDD7dU+G9qWSlPWlu8b3fU+G9qWSlPWlu8b3dU+E9jeooPUsZDL7fU+G9CuoovVwZDD7fU+E9qWSlvWZu8T3dU+G9DuooPVwZDL7dU+E9qWSlvWZu8T3fU+E9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gjqf1"]
+resource_name = "Cube_030"
+_surfaces = [{
+"aabb": AABB(-0.0807584, -0.13681549, -0.11002325, 0.1615168, 0.27363098, 0.2200465),
+"attribute_data": PackedByteArray("0HyAPri0Sj7RfIA+0/4uP4M8rD7S/i4/gzysPrC0Sj6cUp4+OA5RPvZrij4wDlE++GuKPjKVMD+eUp4+NJUwP3YIDj+Kt1M/COZuP4u3Uz8I5m4/OMRJP3YIDj84xEk/dggOP9TDXz8I5m4/1MNfPwjmbj+J0FU/dggOP4DQVT8IlMw909xhPwSUzD0e0Gs/JuQVPx7Qaz8m5BU/ytxhP8qKqj4zlTA/yoqqPjgOUT6IkoA+OA5RPomSgD40lTA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_novle"),
+"name": "Books",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("CuoovVwZDD7dU+G9qWSlPWlu8b3fU+G9qWSlPWlu8b3dU+E9CuoovVwZDD7fU+E9qWSlvWZu8T3fU+E9CuoovVwZDD7fU+E9qWSlPWlu8b3dU+E9DuooPVwZDL7dU+E9CuoovVwZDD7dU+G9CuoovVwZDD7fU+E9qWSlvWZu8T3fU+E9qWSlvWZu8T3dU+G9qWSlPWlu8b3dU+E9qWSlPWlu8b3fU+G9jeooPUsZDL7fU+G9DuooPVwZDL7dU+E9jeooPUsZDL7fU+G9qWSlPWlu8b3fU+G9CuoovVwZDD7dU+G9qWSlvWZu8T3dU+G9jeooPUsZDL7fU+G9qWSlvWZu8T3dU+G9qWSlvWZu8T3fU+E9DuooPVwZDL7dU+E9itZzqf9//z+K1nOp/3//P4rWc6n/f/8/itZzqf9//z//f/9/dCm5VP9//390KblU/3//f3QpuVT/f/9/dCm5VItWitb/f/8/i1aK1v9//z+LVorW/3//P4tWitb/f/8/c6l0KQAA/n9zqXQpAAAAAHOpdCkAAAAAc6l0KQAA/n8AAP//i1a6FAAA//+LVroUAAD//4tWuhQAAP//i1a6FHQpi1b+/wAAdCmLVv7/AAB0KYtW/v8AAHQpi1b+/wAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qdf0g")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4t6n8"]
+data = PackedVector3Array(-0.0412, 0.13679999, -0.11, 0.0808, -0.1179, -0.11, 0.0808, -0.1179, 0.11, 0.0808, -0.1179, 0.11, -0.0412, 0.13679999, 0.11, -0.0412, 0.13679999, -0.11, -0.0808, 0.1179, 0.11, -0.0412, 0.13679999, 0.11, 0.0808, -0.1179, 0.11, 0.0808, -0.1179, 0.11, 0.0412, -0.13679999, 0.11, -0.0808, 0.1179, 0.11, -0.0412, 0.13679999, -0.11, -0.0412, 0.13679999, 0.11, -0.0808, 0.1179, 0.11, -0.0808, 0.1179, 0.11, -0.0808, 0.1179, -0.11, -0.0412, 0.13679999, -0.11, 0.0808, -0.1179, 0.11, 0.0808, -0.1179, -0.11, 0.0412, -0.13679999, -0.11, 0.0412, -0.13679999, -0.11, 0.0412, -0.13679999, 0.11, 0.0808, -0.1179, 0.11, 0.0412, -0.13679999, -0.11, 0.0808, -0.1179, -0.11, -0.0412, 0.13679999, -0.11, -0.0412, 0.13679999, -0.11, -0.0808, 0.1179, -0.11, 0.0412, -0.13679999, -0.11, 0.0412, -0.13679999, -0.11, -0.0808, 0.1179, -0.11, -0.0808, 0.1179, 0.11, -0.0808, 0.1179, 0.11, 0.0412, -0.13679999, 0.11, 0.0412, -0.13679999, -0.11)
+
+[node name="Book_1" type="StaticBody3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 5.960464e-08, 1, -0.89002365, 0.45591423, 5.9604645e-08, -0.4559143, -0.89002365, 0, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gjqf1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0, 5.960464e-08, 1, -0.89002365, 0.45591423, 5.9604645e-08, -0.4559143, -0.89002365, 0, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_4t6n8")

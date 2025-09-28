@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://b81excja2aacg"]
+
+[ext_resource type="Texture2D" uid="uid://dq81c6nmigbyq" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin_5.png" id="1_npdmg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5scnc"]
+resource_name = "Wood2"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_npdmg")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_twgy1"]
+_surfaces = [{
+"aabb": AABB(-0.70000947, -1.1088866, -0.07164812, 1.4000189, 2.2177732, 0.14329636),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAACAAMAAgAEAAAAAQAFAAMABQABAAAAAwAGAAQABgADAAUAAAAEAAYABQAHAAYABgAHAAAAAAAHAAUA"),
+"name": "Wood2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("0jMzv4xkZ79AvJK90jMzv4xkZ79QvJI90jMzv//vjb9QvJI90jMzP4lkZz9AvJI90jMzv//vjb9AvJK90jMzP//vjT9AvJI90jMzP4lkZz9AvJK90jMzP//vjT9AvJK9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a51qx"]
+resource_name = "Cube_018"
+_surfaces = [{
+"aabb": AABB(-0.70000947, -1.1088866, -0.07164812, 1.4000189, 2.2177732, 0.14329636),
+"attribute_data": PackedByteArray("QHI7PwBAQjkA9FE/AEBCOQD0UT8oCZM9QHI7PygJkz3GM4A+OudwP6LbNj7k838/lNs2PozYEj6+M4A+wEutPQT0UT/k838/Q3I7P+Tzfz9Dcjs/4p5tPwL0UT/inm0/LKm5PYzYEj5Iqbk95PN/P9BFmjw653A/YEWaPMBLrT0C9FE/4p5tP0NyOz/inm0/QHI7PygJkz0A9FE/KAmTPUipuT3k838/LKm5PYzYEj6U2zY+jNgSPqLbNj7k838/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_5scnc"),
+"name": "Wood2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("0jMzv4xkZ79AvJK90jMzv4xkZ79QvJI90jMzv//vjb9QvJI90jMzv//vjb9AvJK90jMzP4lkZz9AvJK90jMzP//vjT9AvJK90jMzv4xkZ79AvJK90jMzv//vjb9AvJK90jMzP//vjT9AvJI90jMzP//vjT9AvJK90jMzP4lkZz9AvJK90jMzP4lkZz9AvJI90jMzv4xkZ79QvJI90jMzP//vjT9AvJI90jMzP4lkZz9AvJI90jMzv//vjb9QvJI90jMzP4lkZz9AvJI90jMzP4lkZz9AvJK90jMzv//vjb9AvJK90jMzv//vjb9QvJI90jMzP//vjT9AvJI90jMzv4xkZ79QvJI90jMzv4xkZ79AvJK90jMzP//vjT9AvJK9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7//////fMu+pf////98y76l/////3zLvqX/////fMu+pf///3//f/+/////f/9//7////9//3//v////3//f/+//3//f4I0QNr/f/9/gjRA2v9//3+CNEDa/3//f4I0QNp8y31L/3//v3zLfUv/f/+/fMt9S/9//798y31L/3//v4I0gbT/////gjSBtP////+CNIG0/////4I0gbT/////")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_twgy1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_npdmg"]
+data = PackedVector3Array(-0.7, -0.90389997, -0.0716, -0.7, -0.90389997, 0.0716, -0.7, -1.1089, 0.0716, -0.7, -1.1089, 0.0716, -0.7, -1.1089, -0.0716, -0.7, -0.90389997, -0.0716, 0.7, 0.90389997, -0.0716, 0.7, 1.1089, -0.0716, -0.7, -0.90389997, -0.0716, -0.7, -0.90389997, -0.0716, -0.7, -1.1089, -0.0716, 0.7, 0.90389997, -0.0716, 0.7, 1.1089, 0.0716, 0.7, 1.1089, -0.0716, 0.7, 0.90389997, -0.0716, 0.7, 0.90389997, -0.0716, 0.7, 0.90389997, 0.0716, 0.7, 1.1089, 0.0716, -0.7, -0.90389997, 0.0716, 0.7, 1.1089, 0.0716, 0.7, 0.90389997, 0.0716, 0.7, 0.90389997, 0.0716, -0.7, -1.1089, 0.0716, -0.7, -0.90389997, 0.0716, 0.7, 0.90389997, 0.0716, 0.7, 0.90389997, -0.0716, -0.7, -1.1089, -0.0716, -0.7, -1.1089, -0.0716, -0.7, -1.1089, 0.0716, 0.7, 0.90389997, 0.0716, 0.7, 1.1089, 0.0716, -0.7, -0.90389997, 0.0716, -0.7, -0.90389997, -0.0716, -0.7, -0.90389997, -0.0716, 0.7, 1.1089, -0.0716, 0.7, 1.1089, 0.0716)
+
+[node name="RoofFramePart_1" type="StaticBody3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.5762787e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 3.5762787e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_a51qx")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.5762787e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 3.5762787e-07, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_npdmg")

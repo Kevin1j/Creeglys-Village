@@ -1,0 +1,115 @@
+[gd_scene load_steps=35 format=3 uid="uid://cldsry2wfwgu0"]
+
+[ext_resource type="PackedScene" uid="uid://ca2y242n6kbjg" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin.fbx" id="1_vla8r"]
+[ext_resource type="PackedScene" uid="uid://cf64vsnogrxgl" path="res://Models/Cabin/put together parts/Building/floor.tscn" id="2_pskgb"]
+[ext_resource type="PackedScene" uid="uid://khdyes5bonsf" path="res://Models/Cabin/put together parts/Building/door_wall.tscn" id="3_mnhs2"]
+[ext_resource type="PackedScene" uid="uid://txsqpk5yvexu" path="res://Models/Cabin/put together parts/Building/wall.tscn" id="4_1f336"]
+[ext_resource type="PackedScene" uid="uid://b7j2kp453nmvm" path="res://Models/Cabin/put together parts/furniture/chair.tscn" id="5_dpxeq"]
+[ext_resource type="PackedScene" uid="uid://xeiq7juro5sj" path="res://Models/Cabin/put together parts/furniture/table.tscn" id="6_4d83a"]
+[ext_resource type="PackedScene" uid="uid://j60ntkcvupge" path="res://Models/Cabin/put together parts/Building/fire_place.tscn" id="7_xn1v7"]
+[ext_resource type="PackedScene" uid="uid://d4kj6aaqu8swu" path="res://Models/Cabin/put together parts/furniture/bed.tscn" id="8_ejx4f"]
+[ext_resource type="PackedScene" uid="uid://bh6ul4ee8bmau" path="res://Models/Cabin/put together parts/furniture/book_shelf.tscn" id="9_f4ce3"]
+[ext_resource type="PackedScene" uid="uid://bep3eqvexwou8" path="res://Models/Cabin/put together parts/Building/single_wall_log.tscn" id="10_kdnqq"]
+[ext_resource type="PackedScene" uid="uid://0jwvy1jjg8w8" path="res://Models/Cabin/put together parts/furniture/night_stand.tscn" id="11_7w67t"]
+[ext_resource type="PackedScene" uid="uid://ca76otrq0fniu" path="res://Models/Cabin/put together parts/Building/window_wall.tscn" id="12_uovbw"]
+[ext_resource type="PackedScene" uid="uid://c7o2fcbl64e5b" path="res://Models/Cabin/put together parts/Building/roof.tscn" id="13_yhxy2"]
+[ext_resource type="PackedScene" uid="uid://dt75hcfy8cnnl" path="res://Models/Cabin/put together parts/Building/upper_wall.tscn" id="14_2861x"]
+[ext_resource type="PackedScene" uid="uid://bdtlk71dbylpk" path="res://Models/Cabin/put together parts/Building/wall_half.tscn" id="15_ift73"]
+[ext_resource type="PackedScene" uid="uid://dwl8wi5l8h4wv" path="res://Models/Cabin/put together parts/Building/roof_half.tscn" id="16_q211d"]
+[ext_resource type="PackedScene" uid="uid://dsaco65l1vmvq" path="res://Models/Cabin/put together parts/Building/roof_frame_top.tscn" id="17_udeo3"]
+[ext_resource type="PackedScene" uid="uid://b81excja2aacg" path="res://Models/Cabin/put together parts/Building/roof_frame_part_1.tscn" id="18_jpdca"]
+[ext_resource type="PackedScene" uid="uid://5yloft1se0nc" path="res://Models/Cabin/put together parts/Building/roof_frame_part_2.tscn" id="19_dxmbp"]
+[ext_resource type="PackedScene" uid="uid://dyupllrf47man" path="res://Models/Cabin/put together parts/Building/roof_frame_part_3.tscn" id="20_fev7o"]
+[ext_resource type="PackedScene" uid="uid://c6cs5uyak5f0o" path="res://Models/Cabin/put together parts/Items/axe_2.tscn" id="21_j8wnh"]
+[ext_resource type="PackedScene" uid="uid://y0gmjbscg5wf" path="res://Models/Cabin/put together parts/Items/book_1.tscn" id="22_3ohdt"]
+[ext_resource type="PackedScene" uid="uid://cam4ei3n537lq" path="res://Models/Cabin/put together parts/Items/book_pile_2.tscn" id="23_g8dsq"]
+[ext_resource type="PackedScene" uid="uid://crrpqlabc20kf" path="res://Models/Cabin/put together parts/Items/book_pile_3.tscn" id="24_saiii"]
+[ext_resource type="PackedScene" uid="uid://ba8hnus3l4t0b" path="res://Models/Cabin/put together parts/Items/book_pile_1.tscn" id="25_pvtxg"]
+[ext_resource type="PackedScene" uid="uid://ddiv33gtmh82i" path="res://Models/Cabin/put together parts/Items/book_2.tscn" id="26_faond"]
+[ext_resource type="PackedScene" uid="uid://drmh7hoqhx3tw" path="res://Models/Cabin/put together parts/furniture/rug.tscn" id="27_ddusd"]
+[ext_resource type="PackedScene" uid="uid://ctxiulmh1ex06" path="res://Models/Cabin/put together parts/Building/roof_frame_half.tscn" id="28_4nxv0"]
+[ext_resource type="PackedScene" uid="uid://bq70eqgsxxa0f" path="res://Models/Cabin/put together parts/Building/roof_frame.tscn" id="29_y5cge"]
+[ext_resource type="PackedScene" uid="uid://bm5bwmbgvcrkl" path="res://Models/Cabin/put together parts/furniture/chair_2.tscn" id="30_dneqj"]
+[ext_resource type="PackedScene" uid="uid://bw6iktup6lc5c" path="res://Models/Cabin/put together parts/Building/half_wall_log_1.tscn" id="31_7vrb2"]
+[ext_resource type="PackedScene" uid="uid://cg54lfuak2pa8" path="res://Models/Cabin/put together parts/Building/single_wall_log_2.tscn" id="32_w76q8"]
+[ext_resource type="PackedScene" uid="uid://bnj78byrrxjme" path="res://Models/Cabin/put together parts/Building/half_wall_log_2.tscn" id="33_j3qsh"]
+[ext_resource type="PackedScene" uid="uid://33ajnhjsxbgu" path="res://Models/Cabin/put together parts/Building/half_floor.tscn" id="34_hl4lp"]
+
+[node name="PSX Stlye Modular Cabin" instance=ExtResource("1_vla8r")]
+
+[node name="Finished" type="Node" parent="." index="34"]
+
+[node name="Floor" parent="Finished" index="0" instance=ExtResource("2_pskgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.329313, 0, -39.282482)
+
+[node name="DoorWall" parent="Finished" index="1" instance=ExtResource("3_mnhs2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5808141, -39.198524)
+
+[node name="Wall" parent="Finished" index="2" instance=ExtResource("4_1f336")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34.24569)
+
+[node name="Chair" parent="Finished" index="3" instance=ExtResource("5_dpxeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.504988)
+
+[node name="Table" parent="Finished" index="4" instance=ExtResource("6_4d83a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -46.42894)
+
+[node name="FirePlace" parent="Finished" index="5" instance=ExtResource("7_xn1v7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -38.569344)
+
+[node name="Bed" parent="Finished" index="6" instance=ExtResource("8_ejx4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6202822, 0, -31.008787)
+
+[node name="BookShelf" parent="Finished" index="7" instance=ExtResource("9_f4ce3")]
+
+[node name="SingleWallLog" parent="Finished" index="8" instance=ExtResource("10_kdnqq")]
+
+[node name="NightStand" parent="Finished" index="9" instance=ExtResource("11_7w67t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.359419, 1.636998, -25.001144)
+
+[node name="WindowWall" parent="Finished" index="10" instance=ExtResource("12_uovbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.639425, 0, 0)
+
+[node name="Roof2" parent="Finished" index="11" instance=ExtResource("13_yhxy2")]
+
+[node name="UpperWall" parent="Finished" index="12" instance=ExtResource("14_2861x")]
+
+[node name="WallHalf" parent="Finished" index="13" instance=ExtResource("15_ift73")]
+
+[node name="RoofHalf" parent="Finished" index="14" instance=ExtResource("16_q211d")]
+
+[node name="RoofFrameTop2" parent="Finished" index="15" instance=ExtResource("17_udeo3")]
+
+[node name="RoofFramePart_1" parent="Finished" index="16" instance=ExtResource("18_jpdca")]
+
+[node name="RoofFramePart_2" parent="Finished" index="17" instance=ExtResource("19_dxmbp")]
+
+[node name="RoofFramePart_3" parent="Finished" index="18" instance=ExtResource("20_fev7o")]
+
+[node name="Axe2" parent="Finished" index="19" instance=ExtResource("21_j8wnh")]
+
+[node name="Book_1" parent="Finished" index="20" instance=ExtResource("22_3ohdt")]
+
+[node name="Book_pile_2" parent="Finished" index="21" instance=ExtResource("23_g8dsq")]
+
+[node name="Book_pile_3" parent="Finished" index="22" instance=ExtResource("24_saiii")]
+
+[node name="Book_pile_1" parent="Finished" index="23" instance=ExtResource("25_pvtxg")]
+
+[node name="Book_2" parent="Finished" index="24" instance=ExtResource("26_faond")]
+
+[node name="Rug2" parent="Finished" index="25" instance=ExtResource("27_ddusd")]
+
+[node name="RoofFrameHalf2" parent="Finished" index="26" instance=ExtResource("28_4nxv0")]
+
+[node name="RoofFrame2" parent="Finished" index="27" instance=ExtResource("29_y5cge")]
+
+[node name="Chair_2" parent="Finished" index="28" instance=ExtResource("30_dneqj")]
+
+[node name="HalfWallLog_1" parent="Finished" index="29" instance=ExtResource("31_7vrb2")]
+
+[node name="SingleWallLog_2" parent="Finished" index="30" instance=ExtResource("32_w76q8")]
+
+[node name="HalfWallLog_2" parent="Finished" index="31" instance=ExtResource("33_j3qsh")]
+
+[node name="HalfFloor" parent="Finished" index="32" instance=ExtResource("34_hl4lp")]

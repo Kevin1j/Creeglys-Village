@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=4 uid="uid://drmh7hoqhx3tw"]
+
+[ext_resource type="Texture2D" uid="uid://bn0smwpqr2tly" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin_14.png" id="1_6ex50"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2ab6"]
+resource_name = "Rug"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_6ex50")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vtikk"]
+_surfaces = [{
+"aabb": AABB(-1.3297014, 0, -0.74177325, 2.6594028, 1e-05, 1.4835465),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "Rug",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("qDOqPwAAAADa5D2/qDOqPwAAAADa5D0/qDOqvwAAAADa5D0/qDOqvwAAAADa5D2/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k6bo4"]
+resource_name = "Plane_004"
+_surfaces = [{
+"aabb": AABB(-1.3297014, 0, -0.74177325, 2.6594028, 1e-05, 1.4835465),
+"attribute_data": PackedByteArray("AACAPyjBKj4AAIA/ospSPwAAAACiylI/AAAAACjBKj4="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_p2ab6"),
+"name": "Rug",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("qDOqPwAAAADa5D2/qDOqPwAAAADa5D0/qDOqvwAAAADa5D0/qDOqvwAAAADa5D2//3///////7//f///////v/9///////+//3///////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vtikk")
+
+[node name="Rug2" type="StaticBody3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.8386314e-08, 0, 1.3151041, 0, 1.3151041, 0, -1.3151041, 0, 7.8386314e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k6bo4")
+skeleton = NodePath("")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://rw0fycit515g"]
+[gd_scene load_steps=26 format=3 uid="uid://rw0fycit515g"]
 
 [ext_resource type="Texture2D" uid="uid://cqubdkwj11v1i" path="res://Models/Grass.jpg" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://c6e3037x4rjpi" path="res://Scripts/main.gd" id="1_efxa6"]
@@ -11,6 +11,9 @@
 [ext_resource type="ArrayMesh" uid="uid://cnldhou8qunhn" path="res://Models/FreeObjects/huge tree/huge_tree.obj" id="9_w48qg"]
 [ext_resource type="PackedScene" uid="uid://coarkmefi7q5s" path="res://player.tscn" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://bxcykcwiqq3qo" path="res://Models/FreeObjects/huge tree/diffuse.tga" id="10_vivmo"]
+[ext_resource type="Script" uid="uid://4jf21axl4swb" path="res://Models/Pedestal/PedestalInteraction.gd" id="11_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bm6sxtj7kr51i" path="res://Models/Cabin/put together parts/cabin.tscn" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://dut3gyo4e7qbo" path="res://Models/Pedestal.tscn" id="13_ycdy4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4c57u"]
 
@@ -22,7 +25,7 @@ background_mode = 2
 sky = SubResource("Sky_efxa6")
 fog_enabled = true
 fog_light_color = Color(0.35557514, 0.38088024, 0.4202437, 1)
-fog_density = 0.03
+fog_density = 0.05
 fog_aerial_perspective = 0.097
 fog_sky_affect = 0.685
 volumetric_fog_enabled = true
@@ -85,22 +88,28 @@ shadow_enabled = true
 [node name="NormalTree" type="Node" parent="Environment/Obstacles"]
 
 [node name="Tree" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -7.65356, 0.0077667776, 7.8841662)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -7.65356, 0.0077667776, 25.15228)
 
 [node name="Tree2" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6535602, 0.0077667776, 7.8841662)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6535602, 0.0077667776, 21.357061)
 
 [node name="Tree3" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65356, 0.0077667776, 12.884167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8194556, 0.0077667776, 22.022993)
 
 [node name="Tree4" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.653561, 0.0077667776, 13.884167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.371193, 0.0077667776, 28.583702)
 
 [node name="Tree5" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -17.65356, 0.0077667776, 3.8841667)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -12.888396, 0.0077667776, 23.99239)
 
 [node name="Tree6" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -24.65356, 0.0077667776, 16.884167)
+
+[node name="Tree41" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -24.65356, 0.0077667776, 8.881559)
+
+[node name="Tree42" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -26.582268, 0.0077667776, -0.11844063)
 
 [node name="Tree7" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -20.65356, 0.0077667776, 24.884167)
@@ -114,35 +123,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65356064, 0.0077667776, 30
 [node name="Tree10" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 15.346439, 0.0077667776, 25.884167)
 
+[node name="Tree26" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 21.289724, 0.0077667776, 20.645184)
+
+[node name="Tree27" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 21.289724, 0.0077667776, 26.563965)
+
+[node name="Tree28" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 30.128082, 1.8195021, 26.563965)
+
+[node name="Tree29" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 30.128082, 0.73472196, 21.683619)
+
+[node name="Tree30" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 33.307575, 1.0817661, 12.394623)
+
+[node name="Tree31" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 33.307575, 1.4079356, 6.552739)
+
+[node name="Tree32" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 31.955883, 1.2523398, 2.0043736)
+
 [node name="Tree11" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.346439, 0.0077667776, 25.884167)
 
 [node name="Tree12" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3464394, 0.0077667776, 24.884167)
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 6.3464394, 0.0077667776, 24.884167)
 
 [node name="Tree13" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 27.34644, 0.0077667776, -15.115833)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 27.34644, 1.079504, -15.115833)
 
 [node name="Tree14" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.346439, 0.0077667776, -19.115833)
 
+[node name="Tree33" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 9.346439, 0.0077667776, -28.028564)
+
+[node name="Tree34" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.770362, 0.0077667776, -28.028564)
+
+[node name="Tree35" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 4.1311617, 0.0077667776, -21.98199)
+
+[node name="Tree36" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5962358, 0.0077667776, -21.98199)
+
+[node name="Tree37" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 0.019811869, 0.0077667776, -19.48097)
+
+[node name="Tree38" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 16.098616, 0.0077667776, -23.220757)
+
+[node name="Tree39" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.098616, 0.0077667776, -18.98362)
+
+[node name="Tree40" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.65406, 0.0077667776, -21.275948)
+
 [node name="Tree15" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.653561, 0.0077667776, -27.115833)
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, -9.653561, 0.0077667776, -27.115833)
 
 [node name="Tree16" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.65356, 0.0077667776, -27.115833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.65356, 0.077010445, -27.115833)
 
 [node name="Tree17" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -28.65356, 0.0077667776, -17.115833)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -28.65356, 2.2319994, -17.115833)
+
+[node name="Tree43" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, -28.65356, 2.2319994, -9.050955)
 
 [node name="Tree18" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.65356, 0.0077667776, -14.115833)
+
+[node name="Tree44" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, -20.65356, 0.0077667776, -7.709344)
 
 [node name="Tree19" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6535606, 0.0077667776, -16.115833)
 
 [node name="Tree20" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 18.34644, 0.0077667776, -12.115833)
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 18.34644, 0.0077667776, -12.115833)
 
 [node name="Tree21" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.34644, 0.0077667776, -6.1158333)
@@ -151,7 +211,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.34644, 0.0077667776, -6.11
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 26.34644, 0.0077667776, -0.11583328)
 
 [node name="Tree23" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.34644, 0.0077667776, 5.8841667)
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 27.34644, 0.0077667776, 5.8841667)
 
 [node name="Tree24" parent="Environment/Obstacles/NormalTree" instance=ExtResource("4_272bh")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 27.34644, 0.0077667776, 12.884167)
@@ -165,7 +225,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.34644, 0.0077667776, 12.88
 transform = Transform3D(1.105, 0, 0, 0, 1.105, 0, 0, 0, 1.105, -14.522577, 0, 0)
 
 [node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/PineTrees/PineTree"]
-transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0)
+transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 5.4441714)
 mesh = ExtResource("5_4c57u")
 skeleton = NodePath("../../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
@@ -174,10 +234,36 @@ surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.415955, -0.00446707)
 shape = SubResource("CylinderShape3D_4c57u")
 
+[node name="PineTree2" type="StaticBody3D" parent="Environment/Obstacles/PineTrees"]
+transform = Transform3D(0.82, 0, 0, 0, 0.82, 0, 0, 0, 0.82, -16.805408, 0, -27.38525)
+
+[node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/PineTrees/PineTree2"]
+transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 5.4441714)
+mesh = ExtResource("5_4c57u")
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/PineTrees/PineTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.415955, -0.00446707)
+shape = SubResource("CylinderShape3D_4c57u")
+
+[node name="PineTree3" type="StaticBody3D" parent="Environment/Obstacles/PineTrees"]
+transform = Transform3D(0.565, 0, 0, 0, 0.565, 0, 0, 0, 0.565, 19.90598, 0, 8.266237)
+
+[node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/PineTrees/PineTree3"]
+transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 5.4441714)
+mesh = ExtResource("5_4c57u")
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/PineTrees/PineTree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.415955, -0.00446707)
+shape = SubResource("CylinderShape3D_4c57u")
+
 [node name="Pumpkins" type="Node" parent="Environment/Obstacles"]
 
 [node name="Pumpkin" type="StaticBody3D" parent="Environment/Obstacles/Pumpkins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.503999, 0, 0)
+transform = Transform3D(0.43673894, 0, -0.8995883, 0, 1, 0, 0.8995883, 0, 0.43673894, 15.503999, 0, 0)
 
 [node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/Pumpkins/Pumpkin"]
 transform = Transform3D(0.045, 0, 0, 0, 0.045, 0, 0, 0, 0.045, 0, 0, 0)
@@ -197,9 +283,46 @@ shape = SubResource("SphereShape3D_efxa6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09591675, 0.038953796, -1.2320917)
 shape = SubResource("SphereShape3D_efxa6")
 
+[node name="Pumpkin2" type="StaticBody3D" parent="Environment/Obstacles/Pumpkins"]
+transform = Transform3D(0.42875227, 0, 0.6031347, 0, 0.74, 0, -0.6031347, 0, 0.42875227, 3.8467932, 0, -14.078936)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6973314, 0.20432872, 0.06786212)
+shape = SubResource("SphereShape3D_efxa6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61633873, 0.15563923, 0.6671783)
+shape = SubResource("SphereShape3D_efxa6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09591675, 0.038953796, -1.2320917)
+shape = SubResource("SphereShape3D_efxa6")
+
+[node name="Pumpkin3" type="StaticBody3D" parent="Environment/Obstacles/Pumpkins"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 13.363062, 0, -14.078936)
+
+[node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/Pumpkins/Pumpkin3"]
+transform = Transform3D(0.045, 0, 0, 0, 0.045, 0, 0, 0, 0.045, 0, 0, 0)
+mesh = ExtResource("7_dg77c")
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dg77c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6973314, 0.20432872, 0.06786212)
+shape = SubResource("SphereShape3D_efxa6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61633873, 0.15563923, 0.6671783)
+shape = SubResource("SphereShape3D_efxa6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Environment/Obstacles/Pumpkins/Pumpkin3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09591675, 0.038953796, -1.2320917)
+shape = SubResource("SphereShape3D_efxa6")
+
 [node name="BigTrees" type="Node" parent="Environment/Obstacles"]
 
 [node name="HugeTree" type="StaticBody3D" parent="Environment/Obstacles/BigTrees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.17359)
 
 [node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/BigTrees/HugeTree"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
@@ -209,7 +332,41 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ycdy4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/BigTrees/HugeTree"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_4c57u")
+
+[node name="HugeTree2" type="StaticBody3D" parent="Environment/Obstacles/BigTrees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.882996, 0, -16.715103)
+
+[node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/BigTrees/HugeTree2"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
+mesh = ExtResource("9_w48qg")
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ycdy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/BigTrees/HugeTree2"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_4c57u")
+
+[node name="HugeTree3" type="StaticBody3D" parent="Environment/Obstacles/BigTrees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.203932, 0, -16.715103)
+
+[node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/BigTrees/HugeTree3"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
+mesh = ExtResource("9_w48qg")
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ycdy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/BigTrees/HugeTree3"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 8.278058, 0.01534009, 8.272043)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_4c57u")
+
+[node name="Pedestal" parent="Environment/Obstacles" instance=ExtResource("13_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4030006, 0.007773638, -6.650385)
+script = ExtResource("11_w48qg")
+interact_prompt = "Turn On"
 
 [node name="Terrain" type="StaticBody3D" parent="Environment"]
 
@@ -227,6 +384,9 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Terrain"]
 visible = false
 shape = SubResource("ConcavePolygonShape3D_kek77")
+
+[node name="Cabin" parent="Environment/Terrain" instance=ExtResource("12_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.948734, 0.03580871, 8.285477)
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://coarkmefi7q5s")

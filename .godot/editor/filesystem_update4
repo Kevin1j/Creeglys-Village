@@ -1,10 +1,14 @@
-res://main.tscn
-res://PlayerController.gd
+res://Models/Cabin/put together parts/psx_stlye_modular_cabin.tscn
+res://Models/Cabin/put together parts/roof_frame_part_1.tscn
+res://Models/Cabin/put together parts/cabin.tscn
+res://Models/Cabin/put together parts/Walls/psx_stlye_modular_cabin.tscn
+res://Models/Cabin/put together parts/Building/psx_stlye_modular_cabin.tscn
 res://player.tscn
-res://Scripts/high_level_network_handler.gd
+res://Scripts/InteractableObject.gd
+res://InteractionController.gd
+res://Models/Pedestal.tscn
+res://Models/Pedestal/PedestalMaterial.tres
+res://main.tscn
+res://Models/PedestalInteraction.gd
+res://Models/Pedestal/PedestalInteraction.gd
 res://Scripts/PlayerController.gd
-res://high_level_ui.gd
-res://player_spawner.gd
-res://main.gd
-res://Scripts/main.gd
-res://pause.gd

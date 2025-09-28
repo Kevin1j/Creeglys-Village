@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://dwl8wi5l8h4wv"]
+
+[ext_resource type="Texture2D" uid="uid://ce3k51fpue0pt" path="res://Models/Cabin/put together parts/Textures/PSX Stlye Modular Cabin_11.png" id="1_giqe7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwciy"]
+resource_name = "Roof"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_giqe7")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_buwq3"]
+_surfaces = [{
+"aabb": AABB(-0.75, -0.008395077, -1.2707024, 1.5, 0.016790153, 2.5414047),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAQADAAUABQACAAEABgAEAAIAAgAFAAYABwAAAAQAAAAHAAMABAAGAAcABQADAAcABwAGAAUA"),
+"name": "Roof",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AABAP4GLCbxgpqK/AABAv4GLCbxgpqK/AABAv4GLCbxgpqI/AABAv4GLCTxgpqK/AABAP4GLCbxgpqI/AABAv4GLCTxgpqI/AABAP4GLCTxgpqI/AABAP4GLCTxgpqK/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_765jw"]
+resource_name = "Plane_003"
+_surfaces = [{
+"aabb": AABB(-0.75, -0.008395077, -1.2707024, 1.5, 0.016790153, 2.5414047),
+"attribute_data": PackedByteArray("D0GhOAAgoTgRGBc/ACChOBAYFz/3+n8/ShuhOPf6fz8PGBc/AAChOBAYFz/2+n8/ShuhOPf6fz9KG6E4ACChOByQNzxP/38/X7QxN0//fz8KfzE3AAAyNw+QNzwAADI3Q10INwAACDfRv9g7AAAINy/A2Dt4/38/jhgJN3j/fz88kDc8Tv9/P7I5MjdP/38/CX8xNwAAMzcOkDc8AAAyN0NdCDcAAAk30b/YOwAACTctwNg7eP9/P9YTCTd4/38/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_hwciy"),
+"name": "Roof",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AABAP4GLCbxgpqK/AABAv4GLCbxgpqK/AABAv4GLCbxgpqI/AABAP4GLCbxgpqI/AABAP4GLCTxgpqK/AABAP4GLCTxgpqI/AABAv4GLCTxgpqI/AABAv4GLCTxgpqK/AABAP4GLCTxgpqI/AABAP4GLCbxgpqI/AABAv4GLCbxgpqI/AABAv4GLCTxgpqI/AABAP4GLCTxgpqK/AABAP4GLCbxgpqK/AABAP4GLCbxgpqI/AABAP4GLCTxgpqI/AABAv4GLCTxgpqK/AABAv4GLCbxgpqK/AABAP4GLCbxgpqK/AABAP4GLCTxgpqK/AABAv4GLCbxgpqK/AABAv4GLCTxgpqK/AABAv4GLCTxgpqI/AABAv4GLCbxgpqI//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/7//f////v//v/9////+//+//3////7//7//f////v//v/9//3//f////3//f/9/////f/9//3////9//3//f///////f/9/AID///9//38AgP///3//fwCA////f/9/AID//////3/+////////f/7///////9//v///////3/+/wAA/3//f///AAD/f/9///8AAP9//3///wAA/3//f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_buwq3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nfixb"]
+data = PackedVector3Array(0.75, -0.0084, -1.2707, -0.75, -0.0084, -1.2707, -0.75, -0.0084, 1.2707, -0.75, -0.0084, 1.2707, 0.75, -0.0084, 1.2707, 0.75, -0.0084, -1.2707, 0.75, 0.0084, -1.2707, 0.75, 0.0084, 1.2707, -0.75, 0.0084, 1.2707, -0.75, 0.0084, 1.2707, -0.75, 0.0084, -1.2707, 0.75, 0.0084, -1.2707, 0.75, 0.0084, 1.2707, 0.75, -0.0084, 1.2707, -0.75, -0.0084, 1.2707, -0.75, -0.0084, 1.2707, -0.75, 0.0084, 1.2707, 0.75, 0.0084, 1.2707, 0.75, 0.0084, -1.2707, 0.75, -0.0084, -1.2707, 0.75, -0.0084, 1.2707, 0.75, -0.0084, 1.2707, 0.75, 0.0084, 1.2707, 0.75, 0.0084, -1.2707, -0.75, 0.0084, -1.2707, -0.75, -0.0084, -1.2707, 0.75, -0.0084, -1.2707, 0.75, -0.0084, -1.2707, 0.75, 0.0084, -1.2707, -0.75, 0.0084, -1.2707, -0.75, -0.0084, -1.2707, -0.75, 0.0084, -1.2707, -0.75, 0.0084, 1.2707, -0.75, 0.0084, 1.2707, -0.75, -0.0084, 1.2707, -0.75, -0.0084, -1.2707)
+
+[node name="RoofHalf" type="StaticBody3D"]
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -1.27938975e-17, -1.6810581e-17, 2.1109545e-17, 0.5744119, 0.8185663, -8.164529e-19, -0.8185663, 0.5744119, 0, 0, 0)
+mesh = SubResource("ArrayMesh_765jw")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, -1.27938975e-17, -1.6810581e-17, 2.1109545e-17, 0.5744119, 0.8185663, -8.164529e-19, -0.8185663, 0.5744119, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_nfixb")
