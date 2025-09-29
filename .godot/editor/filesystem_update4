@@ -12,3 +12,10 @@ res://main.tscn
 res://Models/PedestalInteraction.gd
 res://Models/Pedestal/PedestalInteraction.gd
 res://Scripts/PlayerController.gd
+res://Scripts/RoleData.gd
+res://Scripts/Creegly.tres
+res://Scripts/Classes/Survivor.tres
+res://Scripts/Classes/Creegly.tres
+res://Scripts/InteractionController.gd
+res://Scripts/main.gd
+res://Scripts/PedestalInteraction.gd

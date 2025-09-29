@@ -53,7 +53,7 @@ offset_right = 202.5
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "[E] Pickup Item
+text = "
 "
 label_settings = SubResource("LabelSettings_onrkg")
 horizontal_alignment = 1

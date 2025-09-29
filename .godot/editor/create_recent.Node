@@ -1,7 +1,9 @@
+Area3D
+Node
+CollisionShape3D
 Label
 RayCast3D
 Control
-Node
 StaticBody3D
 Node3D
 Marker3D
@@ -10,6 +12,4 @@ CanvasLayer
 HBoxContainer
 MultiplayerSpawner
 MultiplayerSynchronizer
-CollisionShape3D
 Camera3D
-CharacterBody3D

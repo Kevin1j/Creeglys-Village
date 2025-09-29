@@ -1,14 +1,16 @@
-class_name PlayerController
 extends CharacterBody3D
+class_name PlayerController
 
 @export_group("Movement")
+@export var role_name : String = "Survivor"
 @export var max_speed : float = 3.0
 @export var acceleration : float = 15.0
 @export var braking : float = 15.0
 @export var air_acceleration : float = 4.0
 @export var jump_force : float = 5.0
-@export var gravity_modifier : float = 1.5
 @export var max_run_speed : float = 6.0
+
+@export var gravity_modifier : float = 1.5
 var is_running : bool = false
 
 @export_group("Camera")
@@ -23,15 +25,18 @@ func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 
 func _ready():
+	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	camera.current = is_multiplayer_authority()
 	if is_multiplayer_authority():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _physics_process(delta: float) -> void:
 	#Multiplayer 
 	if !is_multiplayer_authority(): return #don't let other players control other characters
+	
 	
 	#Apply gravity
 	if not is_on_floor():
@@ -83,8 +88,17 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
 		$"../".exit_game(name.to_int())
 		get_tree().quit()
-	
-	
+
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		camera_look_input = event.relative
+
+@rpc("any_peer", "call_local", "reliable")
+func apply_role(data : Dictionary):
+	if data.has("role_name"): role_name = data["role_name"]
+	if data.has("max_speed"): max_speed = data["max_speed"]
+	if data.has("acceleration"): acceleration = data["acceleration"]
+	if data.has("braking"): braking = data["braking"]
+	if data.has("air_acceleration"): air_acceleration = data["air_acceleration"]
+	if data.has("jump_force"): jump_force = data["jump_force"]
+	if data.has("max_run_speed"): max_run_speed = data["max_run_speed"]
