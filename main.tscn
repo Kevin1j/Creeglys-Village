@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://rw0fycit515g"]
+[gd_scene load_steps=28 format=3 uid="uid://rw0fycit515g"]
 
 [ext_resource type="Texture2D" uid="uid://cqubdkwj11v1i" path="res://Models/Grass.jpg" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://c6e3037x4rjpi" path="res://Scripts/main.gd" id="1_efxa6"]
@@ -66,6 +66,12 @@ data = PackedVector3Array(-40.492, 6.502, 49.8561, -40.8033, 5.8585997, 51.86129
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
 size = Vector3(1, 42.432053, 155.95004)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycdy4"]
+font_size = 40
+
+[sub_resource type="Theme" id="Theme_w48qg"]
+default_font_size = 40
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_efxa6")
@@ -225,7 +231,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.34644, 0.0077667776, 12.88
 transform = Transform3D(1.105, 0, 0, 0, 1.105, 0, 0, 0, 1.105, -14.522577, 0, 0)
 
 [node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/PineTrees/PineTree"]
-transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 5.4441714)
+transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0)
 mesh = ExtResource("5_4c57u")
 skeleton = NodePath("../../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
@@ -251,13 +257,12 @@ shape = SubResource("CylinderShape3D_4c57u")
 transform = Transform3D(0.565, 0, 0, 0, 0.565, 0, 0, 0, 0.565, 19.90598, 0, 8.266237)
 
 [node name="Model" type="MeshInstance3D" parent="Environment/Obstacles/PineTrees/PineTree3"]
-transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 5.4441714)
+transform = Transform3D(0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0, 0.22953124, 0, 0, 0)
 mesh = ExtResource("5_4c57u")
 skeleton = NodePath("../../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Obstacles/PineTrees/PineTree3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.415955, -0.00446707)
 shape = SubResource("CylinderShape3D_4c57u")
 
 [node name="Pumpkins" type="Node" parent="Environment/Obstacles"]
@@ -413,23 +418,55 @@ spawn_path = NodePath("..")
 
 [node name="Join" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Server" type="Button" parent="Join"]
-layout_mode = 0
-offset_right = 58.0
-offset_bottom = 40.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Join"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -46.5
+offset_right = 62.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Join/VBoxContainer"]
+layout_mode = 2
+text = "Creegly's Village"
+label_settings = SubResource("LabelSettings_ycdy4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Server" type="Button" parent="Join/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_w48qg")
 text = "Server"
 
-[node name="Client" type="Button" parent="Join"]
-layout_mode = 0
-offset_left = 62.0
-offset_right = 145.0
-offset_bottom = 44.0
+[node name="Client" type="Button" parent="Join/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_w48qg")
 text = "Client
 "
 
-[connection signal="pressed" from="Join/Server" to="." method="_on_server_pressed"]
-[connection signal="pressed" from="Join/Client" to="." method="_on_client_pressed"]
+[node name="Quit" type="Button" parent="Join/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_w48qg")
+text = "Quit"
+
+[connection signal="pressed" from="Join/VBoxContainer/Server" to="." method="_on_server_pressed"]
+[connection signal="pressed" from="Join/VBoxContainer/Client" to="." method="_on_client_pressed"]
+[connection signal="pressed" from="Join/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

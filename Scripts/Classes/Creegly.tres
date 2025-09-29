@@ -9,3 +9,4 @@ acceleration = 21.395
 air_acceleration = 11.375
 jump_force = 12.395
 max_run_speed = 19.105
+fog = true

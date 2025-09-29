@@ -3,6 +3,11 @@ extends Node3D
 var peer = ENetMultiplayerPeer.new()
 @export var player_scene : PackedScene
 
+func _ready():
+	multiplayer.connection_failed.connect(_on_connection_failed)
+	multiplayer.connected_to_server.connect(_on_connected)
+	multiplayer.server_disconnected.connect(_on_disconnected)
+
 func _on_server_pressed() -> void:
 	peer.create_server(1027)
 	multiplayer.multiplayer_peer = peer
@@ -16,6 +21,8 @@ func _on_client_pressed() -> void:
 	multiplayer.multiplayer_peer = peer
 	$Join.hide()
 
+func _on_quit_pressed() -> void:
+	get_tree().quit()
 
 func add_player(id = 1):
 	var player = player_scene.instantiate()
@@ -35,12 +42,21 @@ func add_player(id = 1):
 func exit_game(id):
 	multiplayer.peer_disconnected.connect(del_player)
 	del_player(id)
+	$Join.visible = true
 
 func del_player(id):
 	rpc("_del_player", id)
-	
 	
 @rpc("any_peer", "call_local")
 func _del_player(id):
 	get_node(str(id)).queue_free()
 	
+func _on_connection_failed():
+	$Join.visible = true
+	print("Connection failed: could not reach server")
+func _on_connected():
+	$Join.visible = true
+	print("Connected to server successfully")
+func _on_disconnected():
+	$Join.visible = true
+	print("Lost connection to server")

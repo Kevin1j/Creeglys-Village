@@ -8,3 +8,4 @@ class_name RoleData
 @export var air_acceleration : float = 4.0
 @export var jump_force : float = 5.0
 @export var max_run_speed : float = 6.0
+@export var fog : bool = false

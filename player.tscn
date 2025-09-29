@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://coarkmefi7q5s"]
+[gd_scene load_steps=8 format=3 uid="uid://coarkmefi7q5s"]
 
 [ext_resource type="Script" uid="uid://5ig53l2hm8wn" path="res://Scripts/PlayerController.gd" id="1_4flbx"]
 [ext_resource type="ArrayMesh" uid="uid://b7s46ctjehiy8" path="res://Models/FreeObjects/Humanoid Figure/FinalBaseMesh.obj" id="2_onrkg"]
@@ -15,6 +15,9 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+
+[sub_resource type="Environment" id="Environment_i3pqv"]
+fog_density = 0.3291
 
 [sub_resource type="LabelSettings" id="LabelSettings_onrkg"]
 font_size = 22
@@ -35,6 +38,7 @@ mesh = ExtResource("2_onrkg")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6078187, -0.01045987)
+environment = SubResource("Environment_i3pqv")
 current = true
 
 [node name="InteractionController" type="RayCast3D" parent="Camera3D"]

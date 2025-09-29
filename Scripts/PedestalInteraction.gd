@@ -48,6 +48,7 @@ func _interact():
 		"air_acceleration": role.air_acceleration,
 		"jump_force": role.jump_force,
 		"max_run_speed": role.max_run_speed,
+		"fog": role.fog,
 	}
 	
 	var player := get_node_or_null("/root/Main/%d" % sender_id)

@@ -87,7 +87,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("quit"):
 		$"../".exit_game(name.to_int())
-		get_tree().quit()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -102,3 +102,4 @@ func apply_role(data : Dictionary):
 	if data.has("air_acceleration"): air_acceleration = data["air_acceleration"]
 	if data.has("jump_force"): jump_force = data["jump_force"]
 	if data.has("max_run_speed"): max_run_speed = data["max_run_speed"]
+	if data.has("fog"): camera.environment.fog_enabled = data["fog"]

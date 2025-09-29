@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Walking Simulator"
+config/name="Creegly's Village"
 run/main_scene="uid://rw0fycit515g"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
